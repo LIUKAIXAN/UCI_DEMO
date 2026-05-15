@@ -360,7 +360,7 @@ export const Dashboard = () => {
             <FileText className="w-5 h-5" />
           </div>
           <h3 className="font-semibold text-slate-800 mb-2">RESOURCE HUB</h3>
-          <p className="text-sm text-slate-500 mb-4 h-10 line-clamp-2">Access TÜV Standards, Testing Specifications, and Compliance Documents.</p>
+          <p className="text-sm text-slate-500 mb-4 h-10 line-clamp-2">Access Standards, Testing Specifications, and Compliance Documents.</p>
           <div className="text-sm font-medium text-[#005085] flex items-center gap-1 group-hover:gap-2 transition-all">
             Browse Knowledge Base <ArrowRight className="w-4 h-4" />
           </div>

@@ -131,15 +131,12 @@ export const Account = () => {
                    <div>
                      <dt className="text-slate-500 mb-1">Business Type</dt>
                      <dd className="font-medium text-slate-800">Retail / Brand</dd>
-                     
-                     <dt className="text-slate-500 mb-1 mt-4">ODM Account ID</dt>
-                     <dd className="font-mono text-[#005085] bg-blue-50 px-2 py-0.5 rounded inline-block">CUST-88214</dd>
                    </div>
                  </dl>
                  
                  <div className="pt-6 border-t border-slate-200">
                    <p className="text-xs text-slate-500 mb-3 flex items-center gap-1.5">
-                     <AlertCircle className="w-4 h-4" /> Company details are verified by TÜV SÜD.
+                     <AlertCircle className="w-4 h-4" /> Company details are verified.
                    </p>
                    <button className="px-4 py-2 text-sm font-medium text-[#005085] bg-white border border-[#005085]/20 rounded-lg shadow-sm hover:bg-[#005085]/5 transition-colors">
                      Request Edit

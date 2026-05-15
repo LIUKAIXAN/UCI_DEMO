@@ -42,8 +42,7 @@ export const AppLayout = () => {
           
           {/* Logo Area */}
           <div className="flex items-center gap-2 mr-8">
-            <img src="/TUVlogo.svg" alt="TUV SÜD Logo" className="w-10 h-10" />
-            <span className="font-bold text-[#005085] text-xl hidden sm:inline-block">ODM Portal</span>
+            <span className="font-bold text-[#005085] text-xl">Portal</span>
           </div>
 
           {/* Nav Links */}

@@ -2,7 +2,7 @@
 
 ## 项目是什么？
 
-这是一个 **Vite + React + TypeScript + Tailwind CSS** 构建的现代前端项目（ODM Portal 订单管理系统），**不是一个普通的静态 HTML 项目**。
+这是一个 **Vite + React + TypeScript + Tailwind CSS** 构建的现代前端项目（Portal 订单管理系统），**不是一个普通的静态 HTML 项目**。
 
 ---
 
@@ -57,7 +57,7 @@
 - [`src/components/ui/StatusBadge.tsx`](src/components/ui/StatusBadge.tsx) — 状态标签组件
 
 **静态资源：**
-- [`public/TUVlogo.svg`](public/TUVlogo.svg) — 网站 Logo
+- （无）
 
 ### 可选文件
 
@@ -140,7 +140,7 @@ flowchart TD
     B -->|✅ npm run dev| F[Vite 开发服务器启动]
     F --> G[Vite 实时编译 TypeScript + JSX + CSS]
     G --> H[浏览器通过 localhost:3000 访问]
-    H --> I[正常显示 ODM Portal 页面]
+    H --> I[正常显示 Portal 页面]
     
     B -->|✅ npm run build + npm run preview| J[Vite 构建生产版本]
     J --> K[生成 dist/ 目录 — 纯 HTML/CSS/JS]

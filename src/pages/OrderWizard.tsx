@@ -493,7 +493,7 @@ export const OrderWizard = () => {
 
                 <div className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-100 rounded-lg text-blue-800 text-sm">
                   <FileText className="w-5 h-5 flex-shrink-0" />
-                  <p>By submitting this form, you agree to TÜV SÜD's Terms of Service and authorize the generation of the official TRF document.</p>
+                  <p>By submitting this form, you agree to the Terms of Service and authorize the generation of the official TRF document.</p>
                 </div>
               </div>
             )}

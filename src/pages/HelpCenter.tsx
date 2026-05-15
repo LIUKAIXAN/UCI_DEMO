@@ -54,7 +54,7 @@ export const HelpCenter = () => {
                </div>
                <h2 className="text-2xl font-bold text-slate-900 mb-6 max-w-2xl">Dashboard Overview</h2>
                <div className="prose prose-slate max-w-3xl text-sm leading-relaxed">
-                 <p className="mb-4">The ODM Dashboard is your central hub for managing testing and certification requests. It provides a quick glance at your active pipeline, recent applications, and key analytics.</p>
+                 <p className="mb-4">The Dashboard is your central hub for managing testing and certification requests. It provides a quick glance at your active pipeline, recent applications, and key analytics.</p>
                  <h3 className="text-lg font-semibold mt-8 mb-4">The 5-Node View</h3>
                  <p className="mb-4">At the top of your dashboard, you will see the 5 status nodes representing the full lifecycle of an order: from Drafting to Report Released. Clicking any of these nodes will take you to your order list, pre-filtered for that specific status.</p>
                  <div className="bg-slate-100 h-48 w-full rounded-xl border border-slate-200 my-6 flex items-center justify-center text-slate-400">

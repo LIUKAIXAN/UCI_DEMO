@@ -186,7 +186,7 @@ export const OrderDetails = () => {
                 onClick={() => setActiveTab('chat')}
                 className={cn("flex-1 py-3 text-sm font-medium transition-colors border-b-2", activeTab === 'chat' ? "border-[#005085] text-[#005085] bg-[#005085]/5" : "border-transparent text-slate-600 hover:text-slate-900 bg-slate-50")}
               >
-                TÜV Communications
+                Communications
               </button>
             </div>
 
@@ -218,7 +218,7 @@ export const OrderDetails = () => {
                          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-200">
                            <div className="flex items-center justify-between mb-1">
                               <span className="font-bold text-slate-800 text-sm">Test Finished & Report Generated</span>
-                              <span className="text-xs font-medium text-slate-500">TUV Personnel</span>
+                              <span className="text-xs font-medium text-slate-500">Personnel</span>
                            </div>
                            <time className="block text-xs text-slate-400">May 14, 2026 14:00 (Virtual)</time>
                          </div>
@@ -234,7 +234,7 @@ export const OrderDetails = () => {
                        <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-200">
                          <div className="flex items-center justify-between mb-1">
                             <span className="font-bold text-slate-800 text-sm">Test Started</span>
-                            <span className="text-xs font-medium text-slate-500">TUV Personnel</span>
+                            <span className="text-xs font-medium text-slate-500">Personnel</span>
                          </div>
                          <time className="block text-xs text-slate-400">May 12, 2026 09:30 (Virtual)</time>
                        </div>
@@ -250,7 +250,7 @@ export const OrderDetails = () => {
                           <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-200">
                             <div className="flex items-center justify-between mb-1">
                                <span className="font-bold text-slate-800 text-sm">Sample Delivered to Destination</span>
-                               <span className="text-xs font-medium text-slate-500">TUV Personnel</span>
+                               <span className="text-xs font-medium text-slate-500">Personnel</span>
                             </div>
                             <time className="block text-xs text-slate-400">May 10, 2026 10:30 (Virtual)</time>
                           </div>
@@ -297,7 +297,7 @@ export const OrderDetails = () => {
                        <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-200">
                          <div className="flex items-center justify-between mb-1">
                             <span className="font-bold text-slate-800 text-sm">Application Received</span>
-                            <span className="text-xs font-medium text-slate-500">TUV Personnel</span>
+                            <span className="text-xs font-medium text-slate-500">Personnel</span>
                          </div>
                          <time className="block text-xs text-slate-400">May 9, 2026 10:15 (Virtual)</time>
                        </div>
@@ -371,7 +371,7 @@ export const OrderDetails = () => {
                        </div>
                      </div>
                      <div className="flex items-start gap-4">
-                       <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold">TÜV</div>
+                       <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold">CS</div>
                        <div className="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-sm text-sm shadow-sm max-w-[80%]">
                          Yes, we received it this morning. It is currently being unpacked and will enter the testing queue shortly.
                          <div className="text-[10px] text-slate-400 mt-1">10:05 AM</div>
@@ -379,8 +379,8 @@ export const OrderDetails = () => {
                      </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-slate-200 relative">
-                     <input 
-                       type="text" placeholder="Type a message to TÜV team..." 
+                     <input
+                       type="text" placeholder="Type a message to the team..."
                        className="w-full bg-white border border-slate-200 rounded-full pl-4 pr-12 py-3 text-sm focus:outline-none focus:border-[#005085] focus:ring-1 focus:ring-[#005085]"
                      />
                      <button className="absolute right-3 top-1/2 -translate-y-1/2 mt-2 w-8 h-8 bg-[#005085] rounded-full flex items-center justify-center text-white hover:bg-[#00406b] transition-colors">
