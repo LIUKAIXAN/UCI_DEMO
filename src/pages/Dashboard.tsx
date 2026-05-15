@@ -23,23 +23,27 @@ const renderCustomLegend = (props: any) => {
   );
 };
 
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
 const CHART_DATA = [
-  { name: '2022/01', pass: 9, fail: 0, approve: 0, seeResult: 0 },
-  { name: '2022/02', pass: 0, fail: 0, approve: 0, seeResult: 0 },
-  { name: '2022/03', pass: 0, fail: 6, approve: 0, seeResult: 0 },
-  { name: '2022/04', pass: 3, fail: 6, approve: 0, seeResult: 0 },
-  { name: '2022/05', pass: 3, fail: 0, approve: 0, seeResult: 6 },
-  { name: '2022/06', pass: 0, fail: 18, approve: 0, seeResult: 0 },
-  { name: '2022/07', pass: 3, fail: 9, approve: 0, seeResult: 0 },
-  { name: '2022/08', pass: 0, fail: 3, approve: 0, seeResult: 0 },
-  { name: '2022/09', pass: 3, fail: 0, approve: 0, seeResult: 0 },
-  { name: '2022/10', pass: 0, fail: 0, approve: 0, seeResult: 0 },
-  { name: '2022/11', pass: 0, fail: 0, approve: 0, seeResult: 0 },
-  { name: '2022/12', pass: 0, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/01', pass: 9, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/02', pass: 0, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/03', pass: 0, fail: 6, approve: 0, seeResult: 0 },
+  { name: '2026/04', pass: 3, fail: 6, approve: 0, seeResult: 0 },
+  { name: '2026/05', pass: 3, fail: 0, approve: 0, seeResult: 6 },
+  { name: '2026/06', pass: 0, fail: 18, approve: 0, seeResult: 0 },
+  { name: '2026/07', pass: 3, fail: 9, approve: 0, seeResult: 0 },
+  { name: '2026/08', pass: 0, fail: 3, approve: 0, seeResult: 0 },
+  { name: '2026/09', pass: 3, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/10', pass: 0, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/11', pass: 0, fail: 0, approve: 0, seeResult: 0 },
+  { name: '2026/12', pass: 0, fail: 0, approve: 0, seeResult: 0 },
 ];
 
 export const Dashboard = () => {
   const navigate = useNavigate();
+  const [startMonth, setStartMonth] = React.useState(0); // Jan (0)
+  const [endMonth, setEndMonth] = React.useState(11);    // Dec (11)
 
   const totalPass = CHART_DATA.reduce((acc, curr) => acc + curr.pass, 0);
   const totalFail = CHART_DATA.reduce((acc, curr) => acc + curr.fail, 0);
@@ -271,13 +275,19 @@ export const Dashboard = () => {
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-semibold text-slate-800">Order Statistical Analysis</h2>
             <div className="flex items-center gap-2">
-              <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm">
-                <span>Jan 2026</span>
+              <div
+                onClick={() => setStartMonth((startMonth + 11) % 12)}
+                className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 active:scale-95 transition-all"
+              >
+                <span>{MONTHS[startMonth]} 2026</span>
                 <Calendar className="w-4 h-4 ml-2 text-slate-400" />
               </div>
               <span className="text-slate-400">-</span>
-              <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm">
-                <span>Dec 2026</span>
+              <div
+                onClick={() => setEndMonth((endMonth + 1) % 12)}
+                className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 active:scale-95 transition-all"
+              >
+                <span>{MONTHS[endMonth]} 2026</span>
                 <Calendar className="w-4 h-4 ml-2 text-slate-400" />
               </div>
             </div>
