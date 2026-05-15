@@ -62,7 +62,7 @@ export const MOCK_ORDERS: OrderData[] = [
     lab: 'Shanghai Laboratory',
     reportNumber: 'RN-2605-1A',
     testResult: 'Pending',
-    lastModified: '2026-05-10',
+    lastModified: '2026-05-10 09:15:32',
     season: 'Fall 2026',
     fiberContent: '100% Cotton',
     collection: 'Sportswear',
@@ -87,7 +87,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'Adidas Footwear Package',
     status: 'Submitted',
     created: '2026-05-08',
-    lastModified: '2026-05-09',
+    lastModified: '2026-05-09 14:22:08',
     currentStep: 1,
   },
   {
@@ -106,7 +106,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'General Safety Package',
     status: 'Application',
     created: '2026-05-07',
-    lastModified: '2026-05-08',
+    lastModified: '2026-05-08 11:45:17',
     currentStep: 2,
   },
   {
@@ -125,7 +125,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'General Safety Package',
     status: 'Accepted Testing',
     created: '2026-05-06',
-    lastModified: '2026-05-07',
+    lastModified: '2026-05-07 16:30:55',
     currentStep: 3,
     subReports: [
       { name: 'Chem-T01 (REACH)', statusText: '100% PASS', isPass: true },
@@ -148,7 +148,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'Adidas Footwear Package',
     status: 'Accepted Testing',
     created: '2026-05-05',
-    lastModified: '2026-05-11',
+    lastModified: '2026-05-11 08:10:42',
     currentStep: 3,
     issueStep: 3,
     issueMessage: 'The submitted sample quantity runs short. Additional samples are required to proceed with the testing.',
@@ -173,7 +173,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'General Safety Package',
     status: 'Report Released',
     created: '2026-05-04',
-    lastModified: '2026-05-06',
+    lastModified: '2026-05-06 13:58:21',
     currentStep: 4,
     subReports: [
       { name: 'Chem-T01 (REACH)', statusText: '100% PASS', isPass: true },
@@ -196,7 +196,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'Nike Apparel Package',
     status: 'Report Released',
     created: '2026-05-03',
-    lastModified: '2026-05-05',
+    lastModified: '2026-05-05 10:05:37',
     currentStep: 4,
   },
   {
@@ -215,7 +215,7 @@ export const MOCK_ORDERS: OrderData[] = [
     testPackage: 'General Safety Package',
     status: 'Report Released',
     created: '2026-05-01',
-    lastModified: '2026-05-04',
+    lastModified: '2026-05-04 17:42:13',
     currentStep: 4,
   }
 ];

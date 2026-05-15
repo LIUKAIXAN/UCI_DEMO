@@ -165,7 +165,7 @@ export const Dashboard = () => {
                   <th className="px-5 py-3 font-medium">Job Status</th>
                   <th className="px-5 py-3 font-medium">TRF Number</th>
                   <th className="px-5 py-3 font-medium">Style No</th>
-                  <th className="px-5 py-3 font-medium whitespace-nowrap">Update Date</th>
+                  <th className="px-5 py-3 font-medium whitespace-nowrap">Update Time</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -262,7 +262,7 @@ export const Dashboard = () => {
                     <td className="px-5 py-4 text-slate-600">
                       {row.style}
                     </td>
-                    <td className="px-5 py-4 text-slate-500 whitespace-nowrap">
+                    <td className="px-5 py-4 text-slate-500 whitespace-nowrap text-[11px] font-mono">
                       {row.lastModified || row.created}
                     </td>
                   </tr>
@@ -442,9 +442,14 @@ export const Dashboard = () => {
             <FileText className="w-5 h-5" />
           </div>
           <h3 className="font-semibold text-slate-800 mb-2">RESOURCE HUB</h3>
-          <p className="text-sm text-slate-500 mb-4 h-10 line-clamp-2">Access Standards, Testing Specifications, and Compliance Documents.</p>
-          <div className="text-sm font-medium text-[#005085] flex items-center gap-1 group-hover:gap-2 transition-all">
-            Browse Knowledge Base <ArrowRight className="w-4 h-4" />
+          <p className="text-sm text-slate-500 mb-3 line-clamp-2">Access Standards, Testing Specifications, and Compliance Documents.</p>
+          <div className="space-y-2">
+            <div className="text-sm font-medium text-[#005085] flex items-center gap-1 group-hover:gap-2 transition-all">
+              Browse Knowledge Base <ArrowRight className="w-4 h-4" />
+            </div>
+            <div className="text-sm font-medium text-[#005085] flex items-center gap-1 group-hover:gap-2 transition-all">
+              e-Protocol Portal <ArrowRight className="w-4 h-4" />
+            </div>
           </div>
         </div>
 
