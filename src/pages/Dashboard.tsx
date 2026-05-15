@@ -275,21 +275,67 @@ export const Dashboard = () => {
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-semibold text-slate-800">Order Statistical Analysis</h2>
             <div className="flex items-center gap-2">
-              <div
-                onClick={() => setStartMonth((startMonth + 11) % 12)}
-                className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 active:scale-95 transition-all"
-              >
-                <span>{MONTHS[startMonth]} 2026</span>
-                <Calendar className="w-4 h-4 ml-2 text-slate-400" />
-              </div>
+              <Popover.Root>
+                <Popover.Trigger asChild>
+                  <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 transition-all select-none">
+                    <span>{MONTHS[startMonth]} 2026</span>
+                    <Calendar className="w-4 h-4 ml-2 text-slate-400" />
+                  </div>
+                </Popover.Trigger>
+                <Popover.Portal>
+                  <Popover.Content className="bg-white p-3 rounded-xl shadow-xl border border-slate-200 w-64 z-50 fade-in zoom-in" align="center" sideOffset={6}>
+                    <div className="grid grid-cols-3 gap-1">
+                      {MONTHS.map((m, i) => (
+                        <div
+                          key={m}
+                          onClick={() => { setStartMonth(i); }}
+                          className={cn(
+                            "text-center text-sm py-2 px-1 rounded-lg cursor-pointer transition-all font-medium",
+                            i === startMonth
+                              ? "bg-[#005085] text-white shadow"
+                              : "text-slate-600 hover:bg-slate-100"
+                          )}
+                        >
+                          {m}
+                        </div>
+                      ))}
+                    </div>
+                    <Popover.Arrow className="fill-white" />
+                  </Popover.Content>
+                </Popover.Portal>
+              </Popover.Root>
+
               <span className="text-slate-400">-</span>
-              <div
-                onClick={() => setEndMonth((endMonth + 1) % 12)}
-                className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 active:scale-95 transition-all"
-              >
-                <span>{MONTHS[endMonth]} 2026</span>
-                <Calendar className="w-4 h-4 ml-2 text-slate-400" />
-              </div>
+
+              <Popover.Root>
+                <Popover.Trigger asChild>
+                  <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 transition-all select-none">
+                    <span>{MONTHS[endMonth]} 2026</span>
+                    <Calendar className="w-4 h-4 ml-2 text-slate-400" />
+                  </div>
+                </Popover.Trigger>
+                <Popover.Portal>
+                  <Popover.Content className="bg-white p-3 rounded-xl shadow-xl border border-slate-200 w-64 z-50 fade-in zoom-in" align="center" sideOffset={6}>
+                    <div className="grid grid-cols-3 gap-1">
+                      {MONTHS.map((m, i) => (
+                        <div
+                          key={m}
+                          onClick={() => { setEndMonth(i); }}
+                          className={cn(
+                            "text-center text-sm py-2 px-1 rounded-lg cursor-pointer transition-all font-medium",
+                            i === endMonth
+                              ? "bg-[#005085] text-white shadow"
+                              : "text-slate-600 hover:bg-slate-100"
+                          )}
+                        >
+                          {m}
+                        </div>
+                      ))}
+                    </div>
+                    <Popover.Arrow className="fill-white" />
+                  </Popover.Content>
+                </Popover.Portal>
+              </Popover.Root>
             </div>
           </div>
           
