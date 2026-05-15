@@ -42,8 +42,10 @@ const CHART_DATA = [
 
 export const Dashboard = () => {
   const navigate = useNavigate();
-  const [startMonth, setStartMonth] = React.useState(0); // Jan (0)
-  const [endMonth, setEndMonth] = React.useState(11);    // Dec (11)
+  const [startYear, setStartYear] = React.useState(2026);
+  const [startMonth, setStartMonth] = React.useState(0);   // Jan (0)
+  const [endYear, setEndYear] = React.useState(2026);
+  const [endMonth, setEndMonth] = React.useState(11);      // Dec (11)
 
   const totalPass = CHART_DATA.reduce((acc, curr) => acc + curr.pass, 0);
   const totalFail = CHART_DATA.reduce((acc, curr) => acc + curr.fail, 0);
@@ -278,12 +280,24 @@ export const Dashboard = () => {
               <Popover.Root>
                 <Popover.Trigger asChild>
                   <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 transition-all select-none">
-                    <span>{MONTHS[startMonth]} 2026</span>
+                    <span>{MONTHS[startMonth]} {startYear}</span>
                     <Calendar className="w-4 h-4 ml-2 text-slate-400" />
                   </div>
                 </Popover.Trigger>
                 <Popover.Portal>
                   <Popover.Content className="bg-white p-3 rounded-xl shadow-xl border border-slate-200 w-64 z-50 fade-in zoom-in" align="center" sideOffset={6}>
+                    {/* Year selector */}
+                    <div className="flex items-center justify-between mb-3 px-1">
+                      <div
+                        onClick={() => setStartYear(startYear - 1)}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg cursor-pointer hover:bg-slate-100 text-slate-600 text-lg font-bold transition-colors select-none"
+                      >‹</div>
+                      <span className="text-sm font-bold text-slate-800">{startYear}</span>
+                      <div
+                        onClick={() => setStartYear(startYear + 1)}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg cursor-pointer hover:bg-slate-100 text-slate-600 text-lg font-bold transition-colors select-none"
+                      >›</div>
+                    </div>
                     <div className="grid grid-cols-3 gap-1">
                       {MONTHS.map((m, i) => (
                         <div
@@ -310,12 +324,24 @@ export const Dashboard = () => {
               <Popover.Root>
                 <Popover.Trigger asChild>
                   <div className="flex items-center border border-slate-200 rounded-md px-3 py-1.5 bg-slate-50 text-slate-600 text-sm cursor-pointer hover:bg-slate-100 hover:border-slate-300 transition-all select-none">
-                    <span>{MONTHS[endMonth]} 2026</span>
+                    <span>{MONTHS[endMonth]} {endYear}</span>
                     <Calendar className="w-4 h-4 ml-2 text-slate-400" />
                   </div>
                 </Popover.Trigger>
                 <Popover.Portal>
                   <Popover.Content className="bg-white p-3 rounded-xl shadow-xl border border-slate-200 w-64 z-50 fade-in zoom-in" align="center" sideOffset={6}>
+                    {/* Year selector */}
+                    <div className="flex items-center justify-between mb-3 px-1">
+                      <div
+                        onClick={() => setEndYear(endYear - 1)}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg cursor-pointer hover:bg-slate-100 text-slate-600 text-lg font-bold transition-colors select-none"
+                      >‹</div>
+                      <span className="text-sm font-bold text-slate-800">{endYear}</span>
+                      <div
+                        onClick={() => setEndYear(endYear + 1)}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg cursor-pointer hover:bg-slate-100 text-slate-600 text-lg font-bold transition-colors select-none"
+                      >›</div>
+                    </div>
                     <div className="grid grid-cols-3 gap-1">
                       {MONTHS.map((m, i) => (
                         <div
