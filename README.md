@@ -1,82 +1,42 @@
-# UCI Demo — Portal 订单管理系统
+# Portal 订单管理系统
 
-基于 **Vite + React + TypeScript + Tailwind CSS** 构建的现代前端项目。
+React 前端项目，用 IIS 部署运行。
 
 ---
 
-## 快速本地运行
+## 快速部署（3 步）
 
-### 前置条件
+### 1. 启用 IIS
 
-安装 [Node.js](https://nodejs.org/)（v18 或更高版本）。
+控制面板 → 程序 → 启用或关闭 Windows 功能 → 勾选 **Internet Information Services** → 确定。
 
-### 步骤一：安装依赖
+### 2. 配置站点
+
+- `Win + R` → 输入 `inetmgr` → 回车
+- 右键 **网站** → **添加网站**
+- 网站名随便填，物理路径选 `dist/` 文件夹，端口填 `8080` → 确定
+
+### 3. 访问
+
+浏览器打开 `http://localhost:8080`
+
+---
+
+## 修改代码后重新构建
 
 ```bash
 npm install
+npm run build
 ```
 
-### 步骤二：（可选）配置环境变量
-
-```bash
-copy .env.example .env.local
-```
-
-编辑 `.env.local`，填入 Gemini API Key（如需要使用 AI 功能）：
-
-```
-GEMINI_API_KEY="你的Gemini_API密钥"
-```
-
-> 不配置此项不影响 UI 界面显示，仅 AI 功能不可用。
-
-### 步骤三：启动开发服务器
-
-```bash
-npm run dev
-```
-
-终端输出类似：
-
-```
-VITE v6.x.x  ready in xxx ms
-  ➜  Local:   http://localhost:3000/
-```
-
-用浏览器打开 **http://localhost:3000** 即可看到应用。
+然后刷新浏览器即可。
 
 ---
 
-## 其他常用命令
+## 常见问题
 
-| 命令 | 用途 |
+| 现象 | 解决 |
 |------|------|
-| `npm run dev` | 启动开发服务器（热更新） |
-| `npm run build` | 构建生产版本 |
-| `npm run preview` | 本地预览生产构建 |
-| `npm run lint` | TypeScript 类型检查 |
-
----
-
-## 项目结构
-
-```
-├── index.html              # 页面入口（由 Vite 处理）
-├── package.json            # 项目依赖和脚本
-├── vite.config.ts          # Vite 构建配置
-├── tsconfig.json           # TypeScript 配置
-├── .env.example            # 环境变量模板
-├── public/                 # 静态资源
-└── src/
-    ├── main.tsx            # React 应用入口
-    ├── App.tsx             # 路由配置
-    ├── index.css           # 全局样式（Tailwind）
-    ├── context/            # 全局状态
-    ├── data/               # 模拟数据
-    ├── layouts/            # 布局组件
-    ├── pages/              # 页面组件
-    ├── components/         # UI 组件
-    └── lib/                # 工具函数
-```
-
-> **注意**：本项目不是普通静态 HTML 项目，不能直接双击 `index.html` 运行，必须通过 Vite 开发服务器启动。
+| 报 500.19 错误 | web.config 已精简，不会出此问题 |
+| 页面打不开 | IIS 管理器里确认站点已启动 |
+| 样式/JS 404 | `.env` 里 `VITE_BASE="/"` 是否正确 |
