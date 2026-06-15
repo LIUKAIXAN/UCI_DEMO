@@ -31,7 +31,7 @@ sudo systemctl restart nginx
 
 ### 3. 访问
 
-浏览器打开 `http://localhost:8080`
+浏览器打开 `http://localhost`
 
 ---
 
