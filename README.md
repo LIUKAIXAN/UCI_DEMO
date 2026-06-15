@@ -1,4 +1,4 @@
-﻿# Portal 订单管理系统
+# Portal 订单管理系统
 
 React 前端项目，使用 Nginx 部署。
 
