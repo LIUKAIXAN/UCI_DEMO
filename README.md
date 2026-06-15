@@ -1,4 +1,4 @@
-# Portal 订单管理系统
+﻿# Portal 订单管理系统
 
 React 前端项目，使用 Nginx 部署。
 
@@ -25,6 +25,7 @@ npm run build
 ```bash
 sudo cp -r dist/* /usr/share/nginx/html/
 sudo cp nginx.conf /etc/nginx/conf.d/portal.conf
+sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl restart nginx
 ```
