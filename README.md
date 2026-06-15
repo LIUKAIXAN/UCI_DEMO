@@ -26,7 +26,7 @@ npm run build
 sudo cp -r dist/* /usr/share/nginx/html/
 sudo cp nginx.conf /etc/nginx/conf.d/portal.conf
 sudo nginx -t
-sudo systemctl reload nginx
+sudo systemctl restart nginx
 ```
 
 ### 3. 访问
